@@ -1,0 +1,307 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{url}
+
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+
+\usepackage[dvipsnames]{xcolor}
+
+
+
+\newcommand{\ind}{\mathbb{I}}
+
+% Functions using mathrm
+\renewcommand{\dim}{\mathrm{dim}}
+\newcommand{\OPT}{\textup{\textsf{OPT}}}
+\newcommand{\opt}{\textup{\textsf{opt}}}
+\newcommand{\range}{\mathcal{range}}
+\newcommand{\sign}{\textup{\textsf{sign}}}
+\DeclareMathOperator{\sgn}{\textup{\textsf{sign}}}
+\DeclareMathOperator{\diag}{\textsf{Diag}}
+\newcommand{\ber}{\textup{\textsf{Ber}}}
+\newcommand{\err}{\mathrm{err}}
+\newcommand{\gen}{(\frac{\nu}{12})}
+\newcommand{\error}{\mathrm{err}}
+\newcommand{\hinge}{\mathrm{hinge}}
+\newcommand{\erf}{\mathrm{erf}}
+\newcommand{\Appendix}[1]{the full version for}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+
+\newtheorem{problem}{Problem}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}{Remark}
+\newtheorem{assumption}{Assumption}
+\newtheorem{definition}{Definition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{condition}{Condition}
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+\renewcommand{\a}{\mathbf{a}}
+\renewcommand{\b}{\mathbf{b}}
+\renewcommand{\c}{\mathbf{c}}
+\newcommand{\e}{\mathbf{e}}
+\newcommand{\g}{\mathbf{g}}
+\newcommand{\s}{\mathbf{s}}
+\renewcommand{\u}{\mathbf{u}}
+\renewcommand{\v}{\mathbf{v}}
+\newcommand{\w}{\mathbf{w}}
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\y}{\mathbf{y}}
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\A}{\mathbf{A}}
+\newcommand{\B}{\mathbf{B}}
+\newcommand{\C}{\mathbf{C}}
+\newcommand{\D}{\mathbf{D}}
+\newcommand{\E}{\mathbf{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbf{G}}
+\renewcommand{\H}{\mathbf{H}}
+\newcommand{\I}{\mathbf{I}}
+\newcommand{\K}{\mathcal{K}}
+\renewcommand{\L}{\mathbf{L}}
+\newcommand{\M}{\mathbf{M}}
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\Q}{\mathbf{Q}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\S}{\mathbf{S}}
+\newcommand{\T}{\mathbf{T}}
+\newcommand{\U}{\mathbf{U}}
+\newcommand{\V}{\mathbf{V}}
+\newcommand{\W}{\mathbf{W}}
+\newcommand{\X}{\mathbf{X}}
+\newcommand{\Y}{\mathbf{Y}}
+\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\rank}{\mathsf{rank}}
+\newcommand{\orthc}{\mathbf{orth}_c}
+\newcommand{\orthr}{\mathbf{orth}_r}
+\newcommand{\bLambda}{\mathbf{\Lambda}}
+\newcommand{\0}{\mathbf{0}}
+\newcommand{\1}{\mathbf{1}}
+\newcommand{\red}[1]{{\color{red}#1}}
+\newcommand{\blue}[1]{{\color{blue}#1}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bO}{\mathbf{O}}
+
+\newcommand{\sXOR}{\mathsf{XOR}}
+\newcommand{\sAND}{\mathsf{AND}}
+\newcommand{\BHH}{\mathsf{BHH}}
+\newcommand{\RS}{\mathsf{RS}}
+\newcommand{\YES}{\mathsf{YES}}
+\newcommand{\NO}{\mathsf{NO}}
+\newcommand{\srank}{\mathsf{srank}}
+
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator{\erfc}{erfc}
+\DeclareMathOperator*{\bbE}{\mathbb{E}}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\poly}{\mathsf{poly}}
+\DeclareMathOperator{\polylog}{\mathsf{polylog}}
+
+\usepackage{version}
+
+
+\newenvironment{solutions}{\color{red}}{}
+\newcommand{\solution}[1]{\begin{solutions}#1\end{solutions}}
+\newcommand{\grading}[1]{\begin{marking}#1\end{marking}}
+\definecolor{codegray}{gray}{0.9}
+\newcommand{\code}[1]{\colorbox{codegray}{\texttt{#1}}}
+
+
+
+
+\title{\large CS480/680, Spring 2023\\\huge Assignment 4}
+
+\author{Designer: Shufan Zhang; Instructor: Hongyang Zhang}
+\date{Released: July 17; Due: July 31, noon}
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\maketitle
+
+{\color{red}[IMPORTANT] Due to the due date changes, we adjust the marks for this assignment as follows:
+\begin{itemize}
+    \item The marks for Question 1 are normalized to 100\% for this assignment. If you answer Q1 correctly, you will get full marks for this assignment, which is 10 marks for the overall grades of this course.
+
+    \item The marks for Question 2 change to bonus for all assignments in this course. If you get Q2 done correctly, you have 3 bonus marks for all the assignments, but the maximum marks you can get for the assignment are capped by 40 contributing to the overall grade of the course.
+\end{itemize}
+The new due date is \textbf{July 31, noon}.
+}
+
+
+\begin{enumerate}
+
+
+\item \textbf{Writing: Differentially Private Data Analytics [100 Marks]}
+
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|l|c|l|c|}
+			\hline
+			Name & Age & Gender & Num. Matches \\ 
+			\hline
+			Henry & 42 & Male & 8 \\
+			Sarah & 36 & Female & 16 \\
+			Austin & 22 & Non-Binary & 5 \\
+			Adrian & 44 & Male & 12 \\
+			Natalie & 30 & Female & 5 \\
+			Chloe & 23 & Non-Binary & 20 \\
+			Tony & 45 & Male & 13 \\
+			Christine & 28 & Non-Binary & 20 \\
+			Olivia & 39 & Female & 35 \\
+			\hline
+		\end{tabular}
+		\caption{Number of Matches Information}
+		\label{tab:originalTable}
+	\end{table}
+  
+		Tinker would like to use differential 
+		privacy to publish the data, since it is resilient to background knowledge. To do this, Tinker releases a differentially private histogram showing the number
+		of users having a specific number of matches. To generate this histogram, Laplace 
+		noise is added to the true value. For instance, if 4 users in the dataset have 5 matches each, Laplace noise would be added to the total number of such users (4) to hide the true number of users with 5 matches.
+		
+		The \emph{histogram} representation of the dataset $x = (x_0,\dots,x_{n-1})$, where $n=36$, is a 
+		$36$-dimensional vector (ranging from a minimum of 0 matches to the maximum number of matches observed in the dataset, 35) where the $j$-th entry is the number of $x$'s rows whose number of matches is 
+		equal to $j$. For instance, according to the data in Table~\ref{tab:originalTable}, $h_{20}(x) = 2$ since two users in the database (Chloe and Christine) have 20 Tinker matches, and thus:
+		
+		\[
+		h(x) := \left(h_0(x),\dots,h_{{n-1}}(x)\right), n=36
+		\]
+		
+		\if0
+		\[
+   		h(x) := \left(h_0(x),\dots,h_{{n-1}}(x)\right) \ \ \ \ h_j(x) := 
+   			 \sum_{i=0}^{{n-1}} [matches(x_i) = j] \]
+                         \textbf{XXX: is [x] the indicator function of
+                         the predicate x?  That's not defined, nor is it
+                         obvious.  I think an example would be clearer.}
+        \fi
+		
+		Consider the following \emph{noisy histogram algorithm} output: 
+		$$\hat{h}(x) := \left(h_0(x) + L_0,\dots, h_{{n-1}}(x) + L_{{n-1}}\right)$$ 
+		where every $L_j \sim Laplace(\lambda)$ is independent Laplace Noise.
+   		
+		
+		\medskip
+		\textbf{Note:} Wikipedia gives a good overview of differential privacy and 
+		differentially private mechanisms: \url{https://en.wikipedia.org/wiki/Differential_privacy}. You may also seek out additional resources to help answer this 
+		question.\\
+
+        \begin{enumerate}
+        \item {[15 Marks]} What is the sensitivity of this query of releasing histograms?
+			\begin{itemize}
+				\item Sensitivity = $max(|h_i - h_{i-1}|)$ where $i = 1,2,...,35$
+				\item Sensitivity = $2$
+			\end{itemize}
+
+        \item {[15 Marks]} Tinker sets the parameters to $\epsilon = 0.01$, then what is $\lambda$ in Laplace Mechanism?
+			\begin{itemize}
+				\item $\lambda = \frac{S}{\epsilon} = \frac{2}{0.01} = 200$
+			\end{itemize}
+
+        \item {[15 Marks]} Please analyze the expected error of this mechanism. ($\mathcal{E} = \sum_{i=1}^d \mathbb{E} [(o_i-c_i)^2]$, where $o_i$ is the ith entry of the noisy output, and $c_i$ is the ith entry of the true answer.)
+			\begin{itemize}
+				\item Laplace noise has mean equal to 0. So the expected value of noisy output is equal to the true value plus Laplace noise. Therefore, $E[(o_i-c_i)^2]=E[L_i^2]$
+				\item Note that $E[x^2] = Var[x] + E^2[x]$
+				\item $E[L_i^2]=Var[L_i]+0=2\lambda^2=2\times 40000=80000$
+			\end{itemize}
+        
+		\item {[25 Marks]} Does this mechanism satisfy the definition of 
+		$\epsilon$-differential privacy? Will the histogram output of this mechanism be useful? Justify.
+			\begin{itemize}
+				\item Definition stated as $Pr[M(X)\in S]\leq e^\epsilon Pr[M(X')\in S]$
+				\item $\frac{Pr[M(X)\in S]}{Pr[M(X')\in S]}=\frac{Pr[h+Laplace(\lambda)\in S]}{Pr[h'+Laplace(\lambda)\in S]}$
+				\item Define $S'=\{x-h: x\in S\}$
+				\item $\frac{Pr[Laplace(\lambda)\in S']}{Pr[Laplace(\lambda)\in S' + (h-h')]} = \frac{\frac{1}{2\lambda}exp(-\frac{|x|}{\lambda})}{\frac{1}{2\lambda}exp(-\frac{|x-(h-h')|}{\lambda})}$ if we let Laplace($\lambda$) = x
+				\item $= exp(\frac{|x-(h-h')|-|x|}{\lambda}) \leq exp(\frac{h-h'}{\lambda})\leq exp(\frac{S}{\lambda}) = exp(\epsilon)$
+				\item Therefore, it satisfied the definition of $\epsilon$-differential privacy. The output of this mechanism is useful.
+			\end{itemize}
+
+
+        \item {[30 Marks]} Tinker would like to collect new user data with local differential privacy guarantee. Consider a domain $\Sigma=\{l_1,\ldots,l_k\}$ of $k$ locations, please design a randomized response $R$ that takes in a true location $l\in \Sigma$ and randomly outputs a location $o\in \Sigma$. (Describe your algorithm and show that the algorithm achieves $\epsilon$-local differential privacy.)
+			\begin{itemize}
+				\item Let $\epsilon$ be a hyper-parameter which controls the level of privacy protection.
+				\item For output $l_i$, output $l_i$ directly with probability $exp(\frac{\epsilon}{2})$, otherwise, output a uniformly chosen random location in $\Sigma$
+				\item To show this satisfied $\epsilon$-differential privacy, let's consider two cases.
+				\item Assume that the location in D is $l_1$ and in D' is $l_2$
+				\item Case 1: if outputs the true location ($l_i = l_1 or l_2$)
+				\item The probability of reporting the true location in D and D' is $exp(\frac{\epsilon}{2})$ in both cases, and the ratio is 1, which is $\leq e^\epsilon$
+				\item Case 2: if outputs the random location:
+				\item Both probabilities are $1-exp(\frac{\epsilon}{2})$, and the ratio is 1, which $\leq e^\epsilon$
+				\item Therefore, it satisfied $\epsilon$-differential privacy
+			\end{itemize}
+	\end{enumerate}
+
+
+
+
+\item \textbf{Coding: Private Data Synthesis [Bonus 3 Marks for All Assignments]}
+
+The US Census Bureau collects the geographic and demographic data of US residents. 
+The data is anticipated to be used for performing several machine learning or analytic tasks to better understand the residents or incidents of residents, e.g., contact tracing, civic planning, natural disaster rapid response, etc. 
+However, these types of data are considered highly sensitive that contain personally identifiable information (PII) of individuals. 
+Due to privacy laws or regulations, some privacy enhancement techniques should be applied to guarantee individual privacy.
+
+
+Now we consider using differential privacy (DP) as the means to protect individual privacy.
+One way to enforce differential privacy over the collected data is \textbf{private data synthesis}, meaning generating a synthetic dataset with DP guarantees.
+A \textbf{synthetic dataset} is a collection of artificially generated data that simulates real-world data. Instead of being collected from actual observations or measurements, synthetic data is created using various statistical and computational techniques to mimic the characteristics and patterns of the original data.
+Enforcing DP in data synthesis requires the data generation algorithm to be proved as differentially private.
+
+Now you are given a dataset called \emph{Adult} (which can be accessed via \url{https://archive.ics.uci.edu/dataset/2/adult}).
+This dataset has 48,842 rows and 14 attributes.
+These attributes (also called the \emph{schema} of the dataset) include age, workclass, fnlwgt, education, education-num, marital-status, occupation, relationship, race, sex, capital-gain, capital-loss, hours-per-week, and native-country.
+Each row thereby denotes a person.
+A typical machine learning task on this dataset is to use these 14 attributes as features to predict whether a person makes over 50K a year.
+
+Your tasks for this question are the following:
+
+\begin{enumerate}
+    \item {[1 Marks]} Design a DP synthetic dataset generation algorithm (pseudo-code with step-by-step brief description), and show why it is DP. You can use any generative models you like, including GAN, BayesianNet, and your self-created ones.
+
+    \item {[1 Marks]} Generate two DP synthetic datasets (with $\epsilon = \{ 1, 5\}$ respectively) for the Adult dataset, which should contain the exact same number of rows and 15 columns (14 features + 1 prediction class). Submit the code and the generated datasets. 
+
+    \item {[1 Marks]} Choose any classification models (e.g., decision tree, etc.) to perform the learning task (on predicting if a person has income over 50K a year), and for 3 datasets (the ground truth and 2 synthetic datasets), train the model on the first 2/3 of the dataset and test it on the rest of the data. Report the accuracy or other reasonable utility metrics (e.g., ROC) for three testings. You can plot the results or simply report the numbers with a brief justification. 
+\end{enumerate}
+
+
+
+
+
+\end{enumerate}
+
+\end{document} 
